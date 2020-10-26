@@ -112,8 +112,11 @@ section {
   background-color: steelblue;
   color: turquoise;
   padding: 1rem;
-  border-top-left-radius: 150px;
-  border-bottom-right-radius: 150px;
+  /* border-top-left-radius: 150px;
+  border-bottom-right-radius: 150px; */
+  border-radius: 1rem;
+  width: 700px;
+  margin: 0 auto;
 }
 
 #section1 p {
@@ -132,8 +135,9 @@ section {
 
 .container #about div {
   background-color: yellowgreen;
-  border-top-left-radius: 150px;
-  border-bottom-right-radius: 150px;
+  /* border-top-left-radius: 150px;
+  border-bottom-right-radius: 150px; */
+  border-radius: 1rem;
   padding: 3rem;
   text-align: center;
 }
@@ -202,6 +206,7 @@ section {
   line-height: 1.5;
   text-align: center;
   align-self: flex-end;
+  grid-template-areas: "info social contact";
 }
 
 .main-footer h3 {
@@ -211,10 +216,12 @@ section {
 
 .main-footer .info {
   color: lightgray;
+  grid-area: info;
 }
 
 .main-footer .social {
   color: lightgray;
+  grid-area: social;
 }
 
 .main-footer .social a {
@@ -228,6 +235,7 @@ section {
 
 .main-footer .contact {
   color: lightgray;
+  grid-area: contact;
 }
 
 @media (max-width: 750px) {
@@ -249,5 +257,24 @@ section {
 
   .main-nav .nav-items li a {
     font-size: 1.3rem;
+  }
+
+  #section1 {
+    width: 100%;
+  }
+
+  .container #about {
+    grid-template-columns: 1fr;
+  }
+
+  .container #contact {
+    grid-template-columns: 1fr;
+  }
+
+  .main-footer {
+    grid-template-areas:
+      "social"
+      "contact"
+      "info";
   }
 }
