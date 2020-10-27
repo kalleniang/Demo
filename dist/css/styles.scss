@@ -232,16 +232,19 @@ body {
   .main-nav {
     padding: 0;
 
-    .nav-menu,
-    .nav-items {
+    .nav-menu {
       flex-direction: column;
     }
 
     .nav-items {
       align-self: flex-end;
-      display: flex;
+      // display: flex;
       flex-direction: column;
       padding-right: 1rem;
+      background-color: rgba(34, 57, 58, 0);
+      width: 100%;
+      padding: 2px 5px;
+      z-index: 1;
 
       li {
         padding: 0;
@@ -250,6 +253,8 @@ body {
         padding: 2px;
         margin: 0 0 .2rem 0;
         border-radius: 10px;
+        width: 120px;
+        box-shadow: 2px 2px #000;
 
         a {
           font-size: 1.3rem;
